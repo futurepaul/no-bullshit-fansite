@@ -1,7 +1,12 @@
 import Head from 'next/head'
 
 export async function getStaticProps() {
-  const response = await fetch("http://localhost:3001/api/feed");
+  const url =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3001"
+      : "https://no-bullshit.vercel.app";
+
+  const response = await fetch(url + "/api/feed");
   const posts = await response.json();
 
   return {
