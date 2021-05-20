@@ -44,6 +44,7 @@ export default function Home({ posts }) {
       <Head>
         <title>NO BULLSHIT BITCOIN</title>
         <meta name="description" content="An unofficial No Bullshit Bitcoin web view" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://rss.app/feeds/a7pA7KDznTPqIyqR.xml" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
@@ -81,7 +82,7 @@ export default function Home({ posts }) {
 
       <footer className="pb-12">
         <div className="flex flex-col md:items-center px-6">
-          <p>NO BULLSHIT BITCOIN IS A BITCOIN NEWS DESK WITHOUT ADS OR PAYWALLS</p>
+          <p><b>NO BULLSHIT BITCOIN IS A BITCOIN NEWS DESK WITHOUT ADS OR PAYWALLS</b></p>
           <p>Telegram: <a href="https://t.me/s/nobullshitbitcoin">https://t.me/s/nobullshitbitcoin</a></p>
           <p>RSS: <a href="https://rss.app/feeds/a7pA7KDznTPqIyqR.xml">https://rss.app/feeds/a7pA7KDznTPqIyqR.xml</a></p>
           <p>Twitter: <a href="https://twitter.com/nobsbitcoin/">https://twitter.com/nobsbitcoin/</a></p>
@@ -89,7 +90,10 @@ export default function Home({ posts }) {
           <p>
             Donate: <a href="https://tippin.me/@nobsbitcoin">https://tippin.me/@nobsbitcoin</a>
           </p>
-          <p><b>This website is an unofficial fan creation</b></p>
+          <p />
+          <p />
+          <p><b>THIS WEB VERSION IS AN UNOFFICIAL FAN CREATION</b></p>
+          <p>Source: <a href="https://github.com/futurepaul/no-bullshit-fansite">https://github.com/futurepaul/no-bullshit-fansite</a></p>
         </div>
 
       </footer>
