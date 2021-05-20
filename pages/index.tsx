@@ -7,6 +7,16 @@ export async function getStaticProps() {
       : "https://no-bullshit.vercel.app";
 
   const response = await fetch(url + "/api/feed");
+
+  if (!response.ok) {
+    return {
+      props: {
+        posts: [],
+      },
+      revalidate: 10
+    }
+  }
+
   const posts = await response.json();
 
   return {
