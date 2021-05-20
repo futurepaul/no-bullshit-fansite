@@ -39,13 +39,13 @@ function Post({ post }: { post: IPost }) {
   const { imgUrl, title, link, content, date } = post;
 
   return (
-    <div className="p-6 my-4 bg-white flex flex-col max-w-2xl md:w-full transition-shadow duration-500 shadow hover:shadow-lg">
+    <div className="p-6 my-4 w-full md:max-w-2xl bg-white flex flex-col transition-shadow duration-500 shadow hover:shadow-lg">
       <h2>{post.title}</h2>
       <p>{date}</p>
       {imgUrl && <div className="flex justify-center">
         <img src={imgUrl} alt={title} />
       </div>}
-      <div className="ml-4 my-4 max-w-2xl"
+      <div className="md:ml-4 my-4 max-w-2xl break-words"
         dangerouslySetInnerHTML={{ __html: content }}
       />
       <div className="flex justify-end"><a className="text-black underline" href={link}>DISCUSS</a></div>
@@ -79,7 +79,7 @@ export default function Home({ posts }) {
         <meta name="theme-color" content="#FCE389" />
       </Head>
 
-      <main className="p-6">
+      <main className="p-2 md:p-6">
         <div className="flex justify-center">
           <img src="/bs_logo.png" alt="No Bullshit Bitcoin" width={320} height={264} />
         </div>
@@ -95,7 +95,7 @@ export default function Home({ posts }) {
 
       </main>
 
-      <footer className="pb-12">
+      <footer className="pb-12 break-words">
         <div className="flex flex-col md:items-center px-6">
           <p><b>NO BULLSHIT BITCOIN IS A BITCOIN NEWS DESK WITHOUT ADS OR PAYWALLS</b></p>
           <p>Telegram: <a href="https://t.me/s/nobullshitbitcoin">https://t.me/s/nobullshitbitcoin</a></p>
