@@ -45,7 +45,7 @@ function Post({ post }: { post: IPost }) {
       {imgUrl && <div className="flex justify-center">
         <img src={imgUrl} alt={title} />
       </div>}
-      <div className="md:ml-4 my-4 max-w-2xl break-words"
+      <div className="md:ml-4 my-4 md:max-w-2xl break-words"
         dangerouslySetInnerHTML={{ __html: content }}
       />
       <div className="flex justify-end"><a className="text-black underline" href={link}>DISCUSS</a></div>
