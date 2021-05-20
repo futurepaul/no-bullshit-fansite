@@ -4,7 +4,7 @@ export async function getStaticProps() {
   const url =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3001"
-      : "https://no-bullshit.vercel.app";
+      : process.env.PRODUCTION_URL;
 
   const response = await fetch(url + "/api/feed");
 
